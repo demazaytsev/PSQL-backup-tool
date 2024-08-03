@@ -46,14 +46,15 @@ id | name | universe | description
 
 Файл **settings.json**:
 ```json
-{
-    "connection": {
-        "dbname": "fictional_characters_db",
-        "user": "your_username",
-        "password": "your_password",
-        "host": "localhost",
-        "port": "5432"
-    },
+{   
+    "connection": 
+        {
+            "host": "localhost",
+            "port": 5432, 
+            "database": "fictional_characters_db",
+            "user": "your_username",
+            "password": "your_password"
+        },
     "storage": "backups",
     "overwriting": true
 }
