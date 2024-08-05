@@ -80,7 +80,7 @@ class PSQLBackupTool():
                 result_description: tuple[psycopg2.extensions.Column, ...] = crsr.description
                 number_of_columns: int = len(result_description)
                 if number_of_columns != 3:
-                    raise self.Error(f'Результирующая таблица должна состоять из трех столбцов. Данный запрос возвращает таблицу из {number_of_columns} {self.correct_declension('столбец', number_of_columns)}')
+                    raise self.Error(f'Результирующая таблица должна состоять из трех столбцов. Данный запрос возвращает таблицу из {number_of_columns} {self.correct_declension("столбец", number_of_columns)}')
                 number_of_rows: int = crsr.rowcount
                 if number_of_rows <= 0:
                     raise self.Error('Результирующая таблица не содержит значений')
